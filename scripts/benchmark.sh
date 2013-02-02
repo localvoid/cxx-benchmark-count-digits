@@ -26,15 +26,6 @@ function mkgraph {
   ./graph.R < $1 $2
 }
 
-function preload {
-  for m in ${modes[@]}; do
-    MODE=${m%%:*}
-    for i in ${benchmarks[@]};  do
-      $BPATH$i 1 $MODE >> /dev/null
-    done
-  done
-}
-
 function cold_bench {
   echo "Generating cold digits10 data"
   echo "Size,Name,Digits,Time" > $1
@@ -66,8 +57,6 @@ function hot_bench {
   done
 }
 
-
-preload
 
 hot_bench "hot_digits10.csv"
 mkgraph "hot_digits10.csv" "hot_digits10"

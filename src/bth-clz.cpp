@@ -1,3 +1,10 @@
+/*
+
+  This algorithm is based on:
+  http://graphics.stanford.edu/~seander/bithacks.html#IntegerLog10
+
+ */
+
 #include <cstdint>
 #include "benchmark.hpp"
 

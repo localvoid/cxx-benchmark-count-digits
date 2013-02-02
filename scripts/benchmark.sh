@@ -39,12 +39,12 @@ function cold_bench {
     MODE=${m%%:*}
     MODE_DIGITS=${m#*:}
     for x in {1..100}; do
-      for i in ${benchmarks[@]}; do
-        DIGITS=${MODE_DIGITS}
-        while [ $DIGITS -gt 0 ]; do
+      DIGITS=${MODE_DIGITS}
+      while [ $DIGITS -gt 0 ]; do
+        for i in ${benchmarks[@]}; do
           $BPATH$i 1 $MODE $DIGITS >> $1
-          let DIGITS-=1
         done
+        let DIGITS-=1
       done
     done
   done

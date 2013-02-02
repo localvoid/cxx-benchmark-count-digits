@@ -16,7 +16,6 @@ for(i in unique(d$Size)) {
   p <- ggplot(d[d$Size==i,], aes(x=Digits, y=Time, colour=Name)) +
          geom_line() +
          scale_x_discrete() +
-         scale_colour_brewer(palette="Set1") +
          labs(title=paste("Integer size:", i, "bits")) +
          theme_bw()
   print(p)

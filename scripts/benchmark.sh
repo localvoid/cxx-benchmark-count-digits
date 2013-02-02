@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo "It is recommended to set cpu power governor to performance mode before"
+echo "running this script."
+echo " # cpupower frequency-set -g performance"
+echo ""
+
 BPATH=../build/
 
 benchmarks=(

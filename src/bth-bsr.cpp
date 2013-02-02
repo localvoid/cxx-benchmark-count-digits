@@ -1,7 +1,7 @@
 #include <cstdint>
 #include "benchmark.hpp"
 
-const char *benchmark::name = "bsr";
+const char *benchmark::name = "bth-bsr";
 
 static const uint64_t powers_of_10[] = {
   0,

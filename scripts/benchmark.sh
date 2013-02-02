@@ -16,7 +16,7 @@ benchmarks=(
   unroll4
   bchop
   bsearch
-  bsr
+  bth-bsr
 )
 
 modes=(

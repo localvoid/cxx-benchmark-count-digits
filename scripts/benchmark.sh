@@ -70,7 +70,7 @@ function hot_bench {
 preload
 
 hot_bench "hot_digits10.csv"
-mkgraph "hot_digits10.csv" "hot_digits10.pdf"
+mkgraph "hot_digits10.csv" "hot_digits10"
 
 cold_bench "cold_digits10.csv"
-mkgraph "cold_digits10.csv" "cold_digits10.pdf"
+mkgraph "cold_digits10.csv" "cold_digits10"

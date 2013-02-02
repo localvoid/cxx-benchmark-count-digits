@@ -36,26 +36,12 @@ static const uint32_t powers_of_10_u32[] = {
   1000000,
   10000000,
   100000000,
-  1000000000U
-};
-
-static const uint16_t powers_of_10_u16[] = {
-  0,
-  10,
-  100,
-  1000,
-  10000
-};
-
-static const uint8_t powers_of_10_u8[] = {
-  0,
-  10,
-  100
+  1000000000
 };
 
 
 uint32_t benchmark::digits10(std::uint64_t n) {
-  uint32_t t = (64 - __builtin_clzll(n | 1)) * 1233 >> 12;
+  uint64_t t = (64 - __builtin_clzll(n | 1)) * 1233 >> 12;
   return t - (n < powers_of_10[t]) + 1;
 }
 
@@ -67,11 +53,11 @@ uint32_t benchmark::digits10(uint32_t n) {
 uint32_t benchmark::digits10(uint16_t v) {
   uint32_t n = v;
   uint32_t t = (32 - __builtin_clz(n | 1)) * 1233 >> 12;
-  return t - (n < powers_of_10_u16[t]) + 1;
+  return t - (n < powers_of_10_u32[t]) + 1;
 }
 
 uint32_t benchmark::digits10(uint8_t v) {
   uint32_t n = v;
   uint32_t t = (32 - __builtin_clz(n | 1)) * 1233 >> 12;
-  return t - (n < powers_of_10_u8[t]) + 1;
+  return t - (n < powers_of_10_u32[t]) + 1;
 }

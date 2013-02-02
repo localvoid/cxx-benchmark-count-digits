@@ -86,11 +86,11 @@ uint32_t benchmark::digits10(uint32_t n) {
 uint32_t benchmark::digits10(uint16_t v) {
   uint32_t n = v;
   uint32_t t = (bsrq(n | 1) + 1) * 1233 >> 12;
-  return t - (n < powers_of_10_u16[t]) + 1;
+  return t - (n < powers_of_10_u32[t]) + 1;
 }
 
 uint32_t benchmark::digits10(uint8_t v) {
   uint32_t n = v;
   uint32_t t = (bsrq(n | 1) + 1) * 1233 >> 12;
-  return t - (n < powers_of_10_u8[t]) + 1;
+  return t - (n < powers_of_10_u32[t]) + 1;
 }

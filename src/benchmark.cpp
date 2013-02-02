@@ -120,7 +120,8 @@ void benchmark_digits10(int loop_count, int size) {
         }
       });
 
-    std::cout << size << ',' << benchmark::name << ',' << digits << ',' << time/loop_count << std::endl;
+    std::cout << size << ',' << benchmark::name << ',' << digits << ',' << time << std::endl;
+
     digits++;
   }
 }
@@ -134,7 +135,8 @@ void benchmark_digits10_2(int loop_count, int digits, int size) {
       }
     });
 
-  std::cout << size << ','  << benchmark::name << ',' << digits << ',' << time/loop_count << std::endl;
+  std::cout << size << ','  << benchmark::name << ',' << digits << ',' << time << std::endl;
+
 }
 
 

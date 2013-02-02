@@ -17,6 +17,7 @@ benchmarks=(
   bchop
   bsearch
   bth-bsr
+  bth-clz
 )
 
 modes=(

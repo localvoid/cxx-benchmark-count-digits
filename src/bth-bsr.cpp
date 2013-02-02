@@ -36,21 +36,7 @@ static const uint32_t powers_of_10_u32[] = {
   1000000,
   10000000,
   100000000,
-  1000000000U
-};
-
-static const uint16_t powers_of_10_u16[] = {
-  0,
-  10,
-  100,
-  1000,
-  10000
-};
-
-static const uint8_t powers_of_10_u8[] = {
-  0,
-  10,
-  100
+  1000000000
 };
 
 

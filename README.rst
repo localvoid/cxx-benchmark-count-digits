@@ -42,9 +42,9 @@ testing application.
 
 Benchmarking application support positional arguments:
 
- - inner loop counter
- - integer size (u8, u16, u32, u64)
- - number of digits
+ - inner loop counter [default=1]
+ - integer size (u8, u16, u32, u64) [default=u64]
+ - number of digits [default=iterate through all possible values]
 
 Testing application can be launched in two modes: simple testing and
 random testing. For simple testing, just launch the application, and
@@ -62,8 +62,7 @@ arguments (inner loop counter=1, integer size=<all>, digits=<all
 values for current integer size>).
 
 In the hot mode, it runs benchmark application for 100 times with
-arguments (inner loop counter=100, integer size=<all>, digits=<all
-values for current integer size>).
+arguments (inner loop counter=100, integer size=<all>).
 
 And then generates graphical representation of the collected data. As
 a time value it uses median of all time values for each (benchmark,

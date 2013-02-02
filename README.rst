@@ -41,9 +41,10 @@ Each algorithm is compiled in its own benchmarking application and
 testing application.
 
 Benchmarking application support positional arguments:
+
  - inner loop counter
  - integer size (u8, u16, u32, u64)
- - digits
+ - number of digits
 
 Testing application can be launched in two modes: simple testing and
 random testing. For simple testing, just launch the application, and

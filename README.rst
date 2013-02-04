@@ -19,7 +19,7 @@ Compiling
 Running Benchmarks
 ==================
 
-To run benchmarking script yout need to install `R language
+To run benchmarking script you need to install `R language
 <http://www.r-project.org/>`_ and `ggplot2 <http://ggplot2.org/>`_.
 
 Make sure that you set cpu governor mode to performance, so the

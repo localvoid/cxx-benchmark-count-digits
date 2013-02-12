@@ -1,7 +1,9 @@
 #include <cstdint>
 #include <iostream>
 #include <string.h>
-#include <sched.h>
+#ifdef ENABLE_CPU_AFFINITY
+#  include <sched.h>
+#endif
 
 #include "benchmark.hpp"
 
@@ -150,13 +152,14 @@ enum class BenchmarkMode {
 }
 
 int main(int argc, char *argv[]) {
-  cpu_set_t  mask;
+#ifdef ENABLE_CPU_AFFINITY
+  cpu_set_t mask;
   CPU_ZERO(&mask);
   CPU_SET(0, &mask);
   if (sched_setaffinity(0, sizeof(mask), &mask) < 0) {
     perror("sched_setaffinity");
   }
-
+#endif
 
   int loop_count = 1;
   int digits = -1;

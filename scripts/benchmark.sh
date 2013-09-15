@@ -1,8 +1,7 @@
 #!/bin/bash
 
-echo "It is recommended to set cpu power governor to performance mode before"
+echo "It is recommended to set cpu frequency to fixed value before"
 echo "running this script."
-echo " # cpupower frequency-set -g performance"
 echo ""
 
 BPATH=../build/

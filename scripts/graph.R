@@ -7,7 +7,7 @@ out <- commandArgs(trailingOnly = TRUE)[1]
 
 raw_data <- read.csv("stdin")
 d <- ddply(raw_data, .(Size, Name, Digits), summarize,
-           Time = median(Time))
+           Time = min(Time))
 
 
 for(i in unique(d$Size)) {
